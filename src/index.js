@@ -1,5 +1,6 @@
 import { log } from 'console';
 import routerProd from './routes/product.routes.js';
+import routerProdCart from './routes/cart.routes.js';
 import express, { response } from 'express'
 import multer from 'multer';
 import {promises as fs} from 'fs'
@@ -27,6 +28,7 @@ const upload = multer({ storage: storage})
 //Routes
 app.use('/static', express.static(__dirname + '/public'))
 app.use('/api/product', routerProd)
+app.use('/api/cart', routerProdCart)
 app.post('/upload', upload.single('product'), (req, res) => {
     console.log(req.file);
     console.log(req.body);
@@ -50,7 +52,7 @@ app.get('/producto', async (req, res) => {
 })
 
 app.get('/producto/:id', async (req, res) => {
-    const prod = productos.find(prod => prod.id === parseInt (req.params.id))
+    const prod = productos.find(prod => prod.id === parseInt(req.params.id))
     console.log(req.params.id);
     if (prod){
         res.send(prod)

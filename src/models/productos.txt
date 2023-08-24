@@ -1,1 +1,1 @@
-[]
+[{"title":"Gallo Chaua","description":"es arroz","code":"P2","price":500,"status":true,"stock":100,"category":"Electrónica","thumbnails":"","id":1},{"title":"Gallo Chaua","description":"es arroz","code":"P3","price":500,"status":true,"stock":100,"category":"Electrónica","thumbnails":"","id":2}]
