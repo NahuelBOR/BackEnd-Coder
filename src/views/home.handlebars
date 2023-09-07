@@ -1,0 +1,13 @@
+<h1>Productos</h1>
+
+{{#if existProds}}
+    {{#each prods}}
+        <div class="box">
+            <p>{{this.title}}</p>
+            <p>{{this.description}}</p>
+            <p>{{this.price}}</p>
+        </div>
+{{/each}}
+{{else}}
+    <p>No hay Productos</p>
+{{/if}}
